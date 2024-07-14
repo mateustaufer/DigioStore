@@ -12,13 +12,19 @@ class DigioStoreViewModel {
     var isLoadingData: Observable<Bool> = Observable(false)
     var digioStoreData: DigioStoreModel?
     var spotlights: Observable<[SpotlightViewModel]> = Observable(nil)
+    var cash: Observable<CashViewModel> = Observable(nil)
+    var products: Observable<[ProductViewModel]> = Observable(nil)
     
     func numberOfSections() -> Int {
-        return 1
+        1
     }
     
     func numberOfSpotlights(in section: Int) -> Int {
-        return digioStoreData?.spotlights.count ?? 0
+        digioStoreData?.spotlights.count ?? 0
+    }
+    
+    func numberOfProducts(in section: Int) -> Int {
+        digioStoreData?.products.count ?? 0
     }
     
     func getData() {
@@ -34,14 +40,16 @@ class DigioStoreViewModel {
             switch result {
             case .success(let data):
                 self?.digioStoreData = data
-                self?.mapSpotlightData()
+                self?.mapSpotlightsData()
+                self?.mapCashData()
+                self?.mapProductsData()
             case .failure(let err):
                 print(err)
             }
         }
     }
     
-    private func mapSpotlightData() {
+    private func mapSpotlightsData() {
         spotlights.value = self.digioStoreData?.spotlights.compactMap({SpotlightViewModel(spotlight: $0)})
     }
     
@@ -51,6 +59,22 @@ class DigioStoreViewModel {
         }
         
         return spotlight
+    }
+    
+    private func mapCashData() {
+        cash.value = CashViewModel(cash: self.digioStoreData?.cash ?? Cash(title: "", bannerURL: "", description: ""))
+    }
+    
+    private func mapProductsData() {
+        products.value = self.digioStoreData?.products.compactMap({ProductViewModel(product: $0)})
+    }
+    
+    func retriveProduct(withId name: String) -> Product? {
+        guard let product = digioStoreData?.products.first(where: {$0.name == name}) else {
+            return nil
+        }
+        
+        return product
     }
     
 }

@@ -17,6 +17,8 @@ class DigioStoreViewController: UIViewController {
     
     //Variables
     var spotlightsDataSource: [SpotlightViewModel] = []
+    var cashDataSource: CashViewModel = CashViewModel(cash: Cash(title: "", bannerURL: "", description: ""))
+    var productsDataSource: [ProductViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,25 @@ class DigioStoreViewController: UIViewController {
                 return
             }
             self.spotlightsDataSource = spotlights
-//            self.reloadTableView()
+            //            self.reloadSpotlightsCollectionView()
+        }
+        
+        viewModel.cash.bind { [weak self] cash in
+            guard let self = self,
+                  let cash = cash else {
+                return
+            }
+            self.cashDataSource = cash
+            //            self.reloadCashView()
+        }
+        
+        viewModel.products.bind { [weak self] products in
+            guard let self = self,
+                  let products = products else {
+                      return
+                  }
+            self.productsDataSource = products
+            //            self.reloadProductsCollectionView()
         }
     }
     
