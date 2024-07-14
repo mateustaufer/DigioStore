@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF23B6E42C4330D70018990A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B6E32C4330D70018990A /* AppDelegate.swift */; };
+		CF23B6ED2C4330D80018990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF23B6EC2C4330D80018990A /* Assets.xcassets */; };
+		CF23B6F02C4330D80018990A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF23B6EF2C4330D80018990A /* Base */; };
+		CF23B6FB2C4330D80018990A /* DigioStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */; };
+		CF23B7052C4330D80018990A /* DigioStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7042C4330D80018990A /* DigioStoreUITests.swift */; };
+		CF23B7072C4330D80018990A /* DigioStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */; };
+		CF23B7162C43322D0018990A /* DigioStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7142C43322D0018990A /* DigioStoreViewController.swift */; };
+		CF23B7172C43322D0018990A /* DigioStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF23B7152C43322D0018990A /* DigioStoreViewController.xib */; };
+		CF23B71A2C4345340018990A /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7192C4345340018990A /* Observables.swift */; };
+		CF23B71E2C4345A30018990A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B71D2C4345A30018990A /* UIViewExtensions.swift */; };
+		CF23B7212C4345E30018990A /* DigioStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7202C4345E30018990A /* DigioStoreModel.swift */; };
+		CF23B7242C4346600018990A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7232C4346600018990A /* APICaller.swift */; };
+		CF23B7262C4346B70018990A /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7252C4346B70018990A /* NetworkConstants.swift */; };
+		CF23B72B2C4348AB0018990A /* DigioStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */; };
+		CF7C9C952C44719D0070A49D /* SpotlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C942C44719D0070A49D /* SpotlightViewModel.swift */; };
+		CF7C9C972C4472CA0070A49D /* CashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C962C4472CA0070A49D /* CashViewModel.swift */; };
+		CF7C9C992C44731A0070A49D /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C982C44731A0070A49D /* ProductViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF23B6F72C4330D80018990A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23B6D82C4330D70018990A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF23B6DF2C4330D70018990A;
+			remoteInfo = DIgioStore;
+		};
+		CF23B7012C4330D80018990A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23B6D82C4330D70018990A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF23B6DF2C4330D70018990A;
+			remoteInfo = DIgioStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF23B6E02C4330D70018990A /* DigioStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23B6E32C4330D70018990A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF23B6EC2C4330D80018990A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF23B6EF2C4330D80018990A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF23B6F12C4330D80018990A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreTests.swift; sourceTree = "<group>"; };
+		CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23B7042C4330D80018990A /* DigioStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreUITests.swift; sourceTree = "<group>"; };
+		CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF23B7142C43322D0018990A /* DigioStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreViewController.swift; sourceTree = "<group>"; };
+		CF23B7152C43322D0018990A /* DigioStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigioStoreViewController.xib; sourceTree = "<group>"; };
+		CF23B7192C4345340018990A /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
+		CF23B71D2C4345A30018990A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		CF23B7202C4345E30018990A /* DigioStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreModel.swift; sourceTree = "<group>"; };
+		CF23B7232C4346600018990A /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		CF23B7252C4346B70018990A /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreViewModel.swift; sourceTree = "<group>"; };
+		CF7C9C942C44719D0070A49D /* SpotlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightViewModel.swift; sourceTree = "<group>"; };
+		CF7C9C962C4472CA0070A49D /* CashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashViewModel.swift; sourceTree = "<group>"; };
+		CF7C9C982C44731A0070A49D /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF23B6DD2C4330D70018990A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6F32C4330D80018990A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6FD2C4330D80018990A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF23B6D72C4330D70018990A = {
+			isa = PBXGroup;
+			children = (
+				CF23B6E22C4330D70018990A /* DigioStore */,
+				CF23B6F92C4330D80018990A /* DigioStoreTests */,
+				CF23B7032C4330D80018990A /* DigioStoreUITests */,
+				CF23B6E12C4330D70018990A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF23B6E12C4330D70018990A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B6E02C4330D70018990A /* DigioStore.app */,
+				CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */,
+				CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF23B6E22C4330D70018990A /* DigioStore */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B6E32C4330D70018990A /* AppDelegate.swift */,
+				CF23B7182C4345260018990A /* Classes */,
+				CF23B71B2C4345670018990A /* Controllers */,
+				CF23B71C2C43458C0018990A /* Extensions */,
+				CF23B6F12C4330D80018990A /* Info.plist */,
+				CF23B71F2C4345D20018990A /* Models */,
+				CF23B7222C4346470018990A /* Networking */,
+				CF23B7272C4347C50018990A /* Resources */,
+				CF23B7292C4348220018990A /* ViewModels */,
+				CF23B7282C4347F20018990A /* Views */,
+			);
+			path = DigioStore;
+			sourceTree = "<group>";
+		};
+		CF23B6F92C4330D80018990A /* DigioStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */,
+			);
+			path = DigioStoreTests;
+			sourceTree = "<group>";
+		};
+		CF23B7032C4330D80018990A /* DigioStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7042C4330D80018990A /* DigioStoreUITests.swift */,
+				CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */,
+			);
+			path = DigioStoreUITests;
+			sourceTree = "<group>";
+		};
+		CF23B7132C4332050018990A /* DigioStoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7142C43322D0018990A /* DigioStoreViewController.swift */,
+				CF23B7152C43322D0018990A /* DigioStoreViewController.xib */,
+			);
+			path = DigioStoreViewController;
+			sourceTree = "<group>";
+		};
+		CF23B7182C4345260018990A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7192C4345340018990A /* Observables.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF23B71B2C4345670018990A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7132C4332050018990A /* DigioStoreViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF23B71C2C43458C0018990A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B71D2C4345A30018990A /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF23B71F2C4345D20018990A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7202C4345E30018990A /* DigioStoreModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF23B7222C4346470018990A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B7232C4346600018990A /* APICaller.swift */,
+				CF23B7252C4346B70018990A /* NetworkConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CF23B7272C4347C50018990A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B6EC2C4330D80018990A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF23B7282C4347F20018990A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B6EE2C4330D80018990A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF23B7292C4348220018990A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */,
+				CF7C9C942C44719D0070A49D /* SpotlightViewModel.swift */,
+				CF7C9C962C4472CA0070A49D /* CashViewModel.swift */,
+				CF7C9C982C44731A0070A49D /* ProductViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF23B6DF2C4330D70018990A /* DigioStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23B70A2C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStore" */;
+			buildPhases = (
+				CF23B6DC2C4330D70018990A /* Sources */,
+				CF23B6DD2C4330D70018990A /* Frameworks */,
+				CF23B6DE2C4330D70018990A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigioStore;
+			productName = DIgioStore;
+			productReference = CF23B6E02C4330D70018990A /* DigioStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF23B6F52C4330D80018990A /* DigioStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23B70D2C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreTests" */;
+			buildPhases = (
+				CF23B6F22C4330D80018990A /* Sources */,
+				CF23B6F32C4330D80018990A /* Frameworks */,
+				CF23B6F42C4330D80018990A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF23B6F82C4330D80018990A /* PBXTargetDependency */,
+			);
+			name = DigioStoreTests;
+			productName = DIgioStoreTests;
+			productReference = CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF23B6FF2C4330D80018990A /* DigioStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23B7102C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreUITests" */;
+			buildPhases = (
+				CF23B6FC2C4330D80018990A /* Sources */,
+				CF23B6FD2C4330D80018990A /* Frameworks */,
+				CF23B6FE2C4330D80018990A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF23B7022C4330D80018990A /* PBXTargetDependency */,
+			);
+			name = DigioStoreUITests;
+			productName = DIgioStoreUITests;
+			productReference = CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF23B6D82C4330D70018990A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CF23B6DF2C4330D70018990A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CF23B6F52C4330D80018990A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CF23B6DF2C4330D70018990A;
+					};
+					CF23B6FF2C4330D80018990A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CF23B6DF2C4330D70018990A;
+					};
+				};
+			};
+			buildConfigurationList = CF23B6DB2C4330D70018990A /* Build configuration list for PBXProject "DigioStore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF23B6D72C4330D70018990A;
+			productRefGroup = CF23B6E12C4330D70018990A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF23B6DF2C4330D70018990A /* DigioStore */,
+				CF23B6F52C4330D80018990A /* DigioStoreTests */,
+				CF23B6FF2C4330D80018990A /* DigioStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF23B6DE2C4330D70018990A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23B6ED2C4330D80018990A /* Assets.xcassets in Resources */,
+				CF23B7172C43322D0018990A /* DigioStoreViewController.xib in Resources */,
+				CF23B6F02C4330D80018990A /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6F42C4330D80018990A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6FE2C4330D80018990A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF23B6DC2C4330D70018990A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23B7262C4346B70018990A /* NetworkConstants.swift in Sources */,
+				CF23B6E42C4330D70018990A /* AppDelegate.swift in Sources */,
+				CF23B7242C4346600018990A /* APICaller.swift in Sources */,
+				CF23B7162C43322D0018990A /* DigioStoreViewController.swift in Sources */,
+				CF23B71A2C4345340018990A /* Observables.swift in Sources */,
+				CF23B7212C4345E30018990A /* DigioStoreModel.swift in Sources */,
+				CF7C9C992C44731A0070A49D /* ProductViewModel.swift in Sources */,
+				CF7C9C952C44719D0070A49D /* SpotlightViewModel.swift in Sources */,
+				CF23B71E2C4345A30018990A /* UIViewExtensions.swift in Sources */,
+				CF23B72B2C4348AB0018990A /* DigioStoreViewModel.swift in Sources */,
+				CF7C9C972C4472CA0070A49D /* CashViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6F22C4330D80018990A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23B6FB2C4330D80018990A /* DigioStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23B6FC2C4330D80018990A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23B7052C4330D80018990A /* DigioStoreUITests.swift in Sources */,
+				CF23B7072C4330D80018990A /* DigioStoreUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF23B6F82C4330D80018990A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF23B6DF2C4330D70018990A /* DigioStore */;
+			targetProxy = CF23B6F72C4330D80018990A /* PBXContainerItemProxy */;
+		};
+		CF23B7022C4330D80018990A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF23B6DF2C4330D70018990A /* DigioStore */;
+			targetProxy = CF23B7012C4330D80018990A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF23B6EE2C4330D80018990A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF23B6EF2C4330D80018990A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF23B7082C4330D80018990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF23B7092C4330D80018990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF23B70B2C4330D80018990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DIgioStore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Digio Store";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CF23B70C2C4330D80018990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DIgioStore/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Digio Store";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CF23B70E2C4330D80018990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigioStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigioStore";
+			};
+			name = Debug;
+		};
+		CF23B70F2C4330D80018990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigioStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigioStore";
+			};
+			name = Release;
+		};
+		CF23B7112C4330D80018990A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = DIgioStore;
+			};
+			name = Debug;
+		};
+		CF23B7122C4330D80018990A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGP8AR9DZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = DIgioStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF23B6DB2C4330D70018990A /* Build configuration list for PBXProject "DigioStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23B7082C4330D80018990A /* Debug */,
+				CF23B7092C4330D80018990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23B70A2C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23B70B2C4330D80018990A /* Debug */,
+				CF23B70C2C4330D80018990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23B70D2C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23B70E2C4330D80018990A /* Debug */,
+				CF23B70F2C4330D80018990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23B7102C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23B7112C4330D80018990A /* Debug */,
+				CF23B7122C4330D80018990A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF23B6D82C4330D70018990A /* Project object */;
+}
