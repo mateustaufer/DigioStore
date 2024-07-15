@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="W7r-Eh-NAE" id="itO-XS-7co"/>
                 <outlet property="spotlightsCollectionView" destination="Gbx-6S-oni" id="kN8-v8-say"/>
+                <outlet property="userImageView" destination="in1-y9-Jz6" id="jIU-AB-Vbd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,31 +23,68 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="W7r-Eh-NAE">
-                    <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
+                    <rect key="frame" x="169" y="387.66666666666669" width="37" height="36.666666666666686"/>
                     <color key="color" systemColor="systemGray2Color"/>
                 </activityIndicatorView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-6S-oni">
-                    <rect key="frame" x="0.0" y="158" width="375" height="160"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-6S-oni">
+                    <rect key="frame" x="0.0" y="158" width="375" height="170"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="b7j-Wk-fRW"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AeH-fD-14n">
                         <size key="itemSize" width="335" height="160"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="5" maxX="20" maxY="5"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userLogo" translatesAutoresizingMaskIntoConstraints="NO" id="in1-y9-Jz6">
+                    <rect key="frame" x="16" y="66" width="49" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="MJE-s5-h3f"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olá, Mateus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khU-oM-yO7">
+                    <rect key="frame" x="73" y="80" width="95" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="digio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLl-k8-hbr">
+                    <rect key="frame" x="19" y="396" width="43" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" red="0.109803915" green="0.15294116739999999" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJS-Sp-CIP">
+                    <rect key="frame" x="66" y="396" width="45" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" red="0.44313728810000003" green="0.44313728810000003" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="158" id="2KM-3n-sl5"/>
+                <constraint firstItem="in1-y9-Jz6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="CMd-pQ-mZ5"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D7a-Lg-6rh"/>
+                <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="in1-y9-Jz6" secondAttribute="bottom" constant="43" id="KMO-Bd-gDv"/>
+                <constraint firstItem="Gbx-6S-oni" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YtX-BN-M7Z"/>
+                <constraint firstItem="Gbx-6S-oni" firstAttribute="centerX" secondItem="W7r-Eh-NAE" secondAttribute="centerX" id="ZBz-zQ-urf"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pOJ-WN-piX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="in1-y9-Jz6" secondAttribute="trailing" constant="310" id="vYF-eh-rth"/>
+                <constraint firstItem="W7r-Eh-NAE" firstAttribute="top" secondItem="Gbx-6S-oni" secondAttribute="bottom" constant="59.666666666666686" id="xXe-iI-0WG"/>
             </constraints>
             <point key="canvasLocation" x="140" y="19.95073891625616"/>
         </view>
     </objects>
     <resources>
+        <image name="userLogo" width="1408" height="1204"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

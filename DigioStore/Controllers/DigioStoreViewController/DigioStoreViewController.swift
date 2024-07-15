@@ -12,6 +12,7 @@ class DigioStoreViewController: UIViewController {
     //IBOutlets
     @IBOutlet weak var spotlightsCollectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var userImageView: UIImageView!
     
     //ViewModels
     var viewModel: DigioStoreViewModel = DigioStoreViewModel()
@@ -29,7 +30,11 @@ class DigioStoreViewController: UIViewController {
     }
     
     func configView() {
-        self.title = "Digio Store"
+        self.userImageView.layer.borderWidth = 1.0
+        self.userImageView.layer.masksToBounds = false
+        self.userImageView.layer.borderColor = UIColor.white.cgColor
+        self.userImageView.layer.cornerRadius = self.userImageView.frame.size.width / 2
+        self.userImageView.clipsToBounds = true
         
         self.setupSpotlightsCollectionView()
     }
