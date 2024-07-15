@@ -27,6 +27,7 @@
 		CF838F072C449ED5003A1B2C /* SpotlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF838F062C449ED5003A1B2C /* SpotlightCollectionViewCell.xib */; };
 		CF838F082C449ED5003A1B2C /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F052C449ED5003A1B2C /* SpotlightCollectionViewCell.swift */; };
 		CF838F0D2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F0C2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift */; };
+		CF9697BD2C44DE3B00DACCA3 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CF838F052C449ED5003A1B2C /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF838F062C449ED5003A1B2C /* SpotlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotlightCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF838F0C2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DigioStoreController+SpotlightsCollectionView.swift"; sourceTree = "<group>"; };
+		CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23B71D2C4345A30018990A /* UIViewExtensions.swift */,
+				CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,7 +332,6 @@
 			);
 			mainGroup = CF23B6D72C4330D70018990A;
 			packageReferences = (
-				CF838F0E2C44D733003A1B2C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = CF23B6E12C4330D70018990A /* Products */;
 			projectDirPath = "";
@@ -375,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9697BD2C44DE3B00DACCA3 /* UIImageViewExtensions.swift in Sources */,
 				CF23B7262C4346B70018990A /* NetworkConstants.swift in Sources */,
 				CF23B6E42C4330D70018990A /* AppDelegate.swift in Sources */,
 				CF23B7242C4346600018990A /* APICaller.swift in Sources */,
@@ -756,17 +759,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CF838F0E2C44D733003A1B2C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.19.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = CF23B6D82C4330D70018990A /* Project object */;
 }

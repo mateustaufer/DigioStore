@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+//import SDWebImage
 
 class SpotlightCollectionViewCell: UICollectionViewCell {
     
@@ -29,7 +29,8 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     
     func setupSpotlightCell(viewModel: SpotlightViewModel) {
-        self.spotlightImageView.sd_setImage(with: viewModel.bannerURL)
+        //        self.spotlightImageView.sd_setImage(with: viewModel.bannerURL)
+        self.spotlightImageView.load(url: viewModel.bannerURL!)
     }
     
 }

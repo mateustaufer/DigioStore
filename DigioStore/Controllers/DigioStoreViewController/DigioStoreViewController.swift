@@ -10,8 +10,8 @@ import UIKit
 class DigioStoreViewController: UIViewController {
     
     //IBOutlets
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var spotlightsCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //ViewModels
     var viewModel: DigioStoreViewModel = DigioStoreViewModel()
@@ -30,6 +30,8 @@ class DigioStoreViewController: UIViewController {
     
     func configView() {
         self.title = "Digio Store"
+        
+        self.setupSpotlightsCollectionView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +59,7 @@ class DigioStoreViewController: UIViewController {
                   let spotlights = spotlights else {
                 return
             }
+            
             self.spotlightsDataSource = spotlights
             self.reloadSpotlightsCollectionView()
         }
@@ -66,6 +69,7 @@ class DigioStoreViewController: UIViewController {
                   let cash = cash else {
                 return
             }
+            
             self.cashDataSource = cash
             //            self.reloadCashView()
         }
@@ -75,6 +79,7 @@ class DigioStoreViewController: UIViewController {
                   let products = products else {
                 return
             }
+            
             self.productsDataSource = products
             //            self.reloadProductsCollectionView()
         }
