@@ -12,8 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DigioStoreViewController" customModule="DigioStore" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="W7r-Eh-NAE" id="itO-XS-7co"/>
+                <outlet property="cashLabel" destination="IJS-Sp-CIP" id="VBT-bZ-Ayh"/>
+                <outlet property="digioLabel" destination="lLl-k8-hbr" id="abd-iG-bDg"/>
                 <outlet property="spotlightsCollectionView" destination="Gbx-6S-oni" id="kN8-v8-say"/>
                 <outlet property="userImageView" destination="in1-y9-Jz6" id="jIU-AB-Vbd"/>
+                <outlet property="userNameLabel" destination="khU-oM-yO7" id="TcU-sq-uWH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
