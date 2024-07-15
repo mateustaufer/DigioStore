@@ -11,6 +11,7 @@ class DigioStoreViewController: UIViewController {
     
     //IBOutlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var spotlightsCollectionView: UICollectionView!
     
     //ViewModels
     var viewModel: DigioStoreViewModel = DigioStoreViewModel()
@@ -57,7 +58,7 @@ class DigioStoreViewController: UIViewController {
                 return
             }
             self.spotlightsDataSource = spotlights
-            //            self.reloadSpotlightsCollectionView()
+            self.reloadSpotlightsCollectionView()
         }
         
         viewModel.cash.bind { [weak self] cash in
@@ -72,8 +73,8 @@ class DigioStoreViewController: UIViewController {
         viewModel.products.bind { [weak self] products in
             guard let self = self,
                   let products = products else {
-                      return
-                  }
+                return
+            }
             self.productsDataSource = products
             //            self.reloadProductsCollectionView()
         }
