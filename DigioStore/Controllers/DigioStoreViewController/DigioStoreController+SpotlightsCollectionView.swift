@@ -17,18 +17,18 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         self.registerSpotlightsCells()
     }
     
-    func reloadSpotlightsCollectionView() {
-        DispatchQueue.main.async {
-            self.spotlightsCollectionView.reloadData()
-        }
+    func registerSpotlightsCells() {
+        self.spotlightsCollectionView.register(SpotlightCollectionViewCell.register(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         viewModel.numberOfSections()
     }
     
-    func registerSpotlightsCells() {
-        self.spotlightsCollectionView.register(SpotlightCollectionViewCell.register(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier)
+    func reloadSpotlightsCollectionView() {
+        DispatchQueue.main.async {
+            self.spotlightsCollectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

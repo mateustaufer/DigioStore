@@ -52,16 +52,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="digio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLl-k8-hbr">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="digio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLl-k8-hbr">
                     <rect key="frame" x="19" y="396" width="43" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="0.109803915" green="0.15294116739999999" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJS-Sp-CIP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJS-Sp-CIP">
                     <rect key="frame" x="66" y="396" width="45" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="0.44313728810000003" green="0.44313728810000003" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
@@ -71,14 +69,18 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="158" id="2KM-3n-sl5"/>
+                <constraint firstItem="lLl-k8-hbr" firstAttribute="baseline" secondItem="IJS-Sp-CIP" secondAttribute="baseline" id="6Ch-4z-U5f"/>
+                <constraint firstItem="IJS-Sp-CIP" firstAttribute="leading" secondItem="lLl-k8-hbr" secondAttribute="trailing" constant="4" id="9xZ-gC-UJV"/>
                 <constraint firstItem="in1-y9-Jz6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="CMd-pQ-mZ5"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D7a-Lg-6rh"/>
+                <constraint firstItem="lLl-k8-hbr" firstAttribute="top" secondItem="Gbx-6S-oni" secondAttribute="bottom" constant="68" id="JRj-rh-Nfs"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="in1-y9-Jz6" secondAttribute="bottom" constant="43" id="KMO-Bd-gDv"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YtX-BN-M7Z"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="centerX" secondItem="W7r-Eh-NAE" secondAttribute="centerX" id="ZBz-zQ-urf"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pOJ-WN-piX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="in1-y9-Jz6" secondAttribute="trailing" constant="310" id="vYF-eh-rth"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="top" secondItem="Gbx-6S-oni" secondAttribute="bottom" constant="59.666666666666686" id="xXe-iI-0WG"/>
+                <constraint firstItem="lLl-k8-hbr" firstAttribute="centerX" secondItem="in1-y9-Jz6" secondAttribute="centerX" id="ylj-3Y-bkV"/>
             </constraints>
             <point key="canvasLocation" x="140" y="19.95073891625616"/>
         </view>
