@@ -12,6 +12,11 @@ struct DigioStoreModel: Codable {
     let spotlights: [Spotlight]
     let products: [Product]
     let cash: Cash
+    
+    enum CodingKeys: String, CodingKey {
+        case spotlights = "spotlight"
+        case products, cash
+    }
 }
 
 // MARK: - Cash
