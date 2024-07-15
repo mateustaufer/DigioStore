@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,6 +16,8 @@
                 <outlet property="cashCollectionView" destination="JpR-a5-AoY" id="N2F-kw-bsM"/>
                 <outlet property="cashLabel" destination="IJS-Sp-CIP" id="VBT-bZ-Ayh"/>
                 <outlet property="digioLabel" destination="lLl-k8-hbr" id="abd-iG-bDg"/>
+                <outlet property="productsCollectionView" destination="NgE-OG-8Mg" id="oBU-mx-NIc"/>
+                <outlet property="productsLabel" destination="XJC-aV-cSB" id="md6-o9-n3V"/>
                 <outlet property="spotlightsCollectionView" destination="Gbx-6S-oni" id="kN8-v8-say"/>
                 <outlet property="userImageView" destination="in1-y9-Jz6" id="jIU-AB-Vbd"/>
                 <outlet property="userNameLabel" destination="khU-oM-yO7" id="TcU-sq-uWH"/>
@@ -44,20 +47,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="digio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLl-k8-hbr">
-                    <rect key="frame" x="19" y="376" width="43" height="22"/>
+                    <rect key="frame" x="16" y="376" width="49" height="22"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                    <color key="textColor" red="0.109803915" green="0.15294116739999999" blue="0.32156863810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="textColor" name="AccentColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJS-Sp-CIP">
-                    <rect key="frame" x="66" y="376" width="45" height="22"/>
+                    <rect key="frame" x="64" y="376" width="45" height="22"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                     <color key="textColor" red="0.44313728810000003" green="0.44313728810000003" blue="0.44313728810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-a5-AoY">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-a5-AoY">
                     <rect key="frame" x="0.0" y="398" width="375" height="116"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3WZ-Wd-aoA">
                         <size key="itemSize" width="335" height="96"/>
@@ -76,7 +78,23 @@
                         <size key="itemSize" width="335" height="160"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
+                        <inset key="sectionInset" minX="16" minY="10" maxX="16" maxY="10"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produtos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-aV-cSB">
+                    <rect key="frame" x="16" y="539" width="79" height="22"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    <color key="textColor" name="AccentColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-OG-8Mg">
+                    <rect key="frame" x="0.0" y="560" width="375" height="130"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Hr-pE-pHT">
+                        <size key="itemSize" width="100" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="32" minY="10" maxX="32" maxY="10"/>
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
@@ -85,23 +103,37 @@
             <constraints>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="147" id="2KM-3n-sl5"/>
                 <constraint firstItem="lLl-k8-hbr" firstAttribute="baseline" secondItem="IJS-Sp-CIP" secondAttribute="baseline" id="6Ch-4z-U5f"/>
-                <constraint firstItem="IJS-Sp-CIP" firstAttribute="leading" secondItem="lLl-k8-hbr" secondAttribute="trailing" constant="4" id="9xZ-gC-UJV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NgE-OG-8Mg" secondAttribute="bottom" constant="88" id="6Du-ft-cSs"/>
+                <constraint firstItem="XJC-aV-cSB" firstAttribute="top" secondItem="JpR-a5-AoY" secondAttribute="bottom" constant="25" id="6iT-5f-DJV"/>
+                <constraint firstItem="IJS-Sp-CIP" firstAttribute="leading" secondItem="lLl-k8-hbr" secondAttribute="trailing" constant="-1" id="9xZ-gC-UJV"/>
                 <constraint firstItem="in1-y9-Jz6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="CMd-pQ-mZ5"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D7a-Lg-6rh"/>
+                <constraint firstItem="JpR-a5-AoY" firstAttribute="leading" secondItem="NgE-OG-8Mg" secondAttribute="leading" id="J4k-TL-KdH"/>
                 <constraint firstItem="lLl-k8-hbr" firstAttribute="top" secondItem="Gbx-6S-oni" secondAttribute="bottom" constant="49" id="JRj-rh-Nfs"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="top" secondItem="in1-y9-Jz6" secondAttribute="bottom" constant="32" id="KMO-Bd-gDv"/>
+                <constraint firstItem="XJC-aV-cSB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="N0o-aF-CJw"/>
+                <constraint firstItem="NgE-OG-8Mg" firstAttribute="top" secondItem="JpR-a5-AoY" secondAttribute="bottom" constant="46" id="VqK-Ru-x3y"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YtX-BN-M7Z"/>
                 <constraint firstItem="Gbx-6S-oni" firstAttribute="centerX" secondItem="W7r-Eh-NAE" secondAttribute="centerX" id="ZBz-zQ-urf"/>
+                <constraint firstItem="JpR-a5-AoY" firstAttribute="trailing" secondItem="NgE-OG-8Mg" secondAttribute="trailing" id="b7k-A3-Has"/>
+                <constraint firstItem="JpR-a5-AoY" firstAttribute="leading" secondItem="Gbx-6S-oni" secondAttribute="leading" id="gGa-GL-2XT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XJC-aV-cSB" secondAttribute="bottom" constant="217" id="or9-Sx-IWe"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pOJ-WN-piX"/>
+                <constraint firstItem="lLl-k8-hbr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tab-UV-boP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="in1-y9-Jz6" secondAttribute="trailing" constant="310" id="vYF-eh-rth"/>
+                <constraint firstItem="JpR-a5-AoY" firstAttribute="top" secondItem="lLl-k8-hbr" secondAttribute="bottom" id="wVW-ZH-1np"/>
                 <constraint firstItem="W7r-Eh-NAE" firstAttribute="top" secondItem="Gbx-6S-oni" secondAttribute="bottom" constant="60.666666666666686" id="xXe-iI-0WG"/>
                 <constraint firstItem="lLl-k8-hbr" firstAttribute="centerX" secondItem="in1-y9-Jz6" secondAttribute="centerX" id="ylj-3Y-bkV"/>
+                <constraint firstItem="JpR-a5-AoY" firstAttribute="trailing" secondItem="Gbx-6S-oni" secondAttribute="trailing" id="zok-Pr-pne"/>
             </constraints>
             <point key="canvasLocation" x="140" y="19.95073891625616"/>
         </view>
     </objects>
     <resources>
         <image name="userLogo" width="1408" height="1204"/>
+        <namedColor name="AccentColor">
+            <color red="0.10999999940395355" green="0.15299999713897705" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
