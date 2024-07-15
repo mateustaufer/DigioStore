@@ -12,6 +12,10 @@ class DigioStoreViewController: UIViewController {
     //IBOutlets
     @IBOutlet weak var spotlightsCollectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var digioLabel: UILabel!
+    @IBOutlet weak var cashLabel: UILabel!
     
     //ViewModels
     var viewModel: DigioStoreViewModel = DigioStoreViewModel()
@@ -29,7 +33,19 @@ class DigioStoreViewController: UIViewController {
     }
     
     func configView() {
-        self.title = "Digio Store"
+        self.userImageView.layer.borderWidth = 1.0
+        self.userImageView.layer.masksToBounds = false
+        self.userImageView.layer.borderColor = UIColor.white.cgColor
+        self.userImageView.layer.cornerRadius = self.userImageView.frame.size.width / 2
+        self.userImageView.clipsToBounds = true
+        self.userImageView.isHidden = true
+        
+        self.userNameLabel.isHidden = true
+        
+        self.spotlightsCollectionView.isHidden = true
+        
+        self.digioLabel.isHidden = true
+        self.cashLabel.isHidden = true
         
         self.setupSpotlightsCollectionView()
     }
@@ -49,6 +65,11 @@ class DigioStoreViewController: UIViewController {
                 if isLoading {
                     self?.activityIndicator.startAnimating()
                 } else {
+                    self?.userImageView.isHidden = false
+                    self?.userNameLabel.isHidden = false
+                    self?.spotlightsCollectionView.isHidden = false
+                    self?.digioLabel.isHidden = false
+                    self?.cashLabel.isHidden = false
                     self?.activityIndicator.stopAnimating()
                 }
             }

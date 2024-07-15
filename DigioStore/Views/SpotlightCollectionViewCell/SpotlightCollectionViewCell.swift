@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import SDWebImage
 
 class SpotlightCollectionViewCell: UICollectionViewCell {
     
@@ -25,11 +24,11 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        spotlightImageView.round(8)
     }
     
     
     func setupSpotlightCell(viewModel: SpotlightViewModel) {
-        //        self.spotlightImageView.sd_setImage(with: viewModel.bannerURL)
         self.spotlightImageView.load(url: viewModel.bannerURL!)
     }
     

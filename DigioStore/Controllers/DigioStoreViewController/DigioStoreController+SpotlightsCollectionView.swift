@@ -17,18 +17,18 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         self.registerSpotlightsCells()
     }
     
-    func reloadSpotlightsCollectionView() {
-        DispatchQueue.main.async {
-            self.spotlightsCollectionView.reloadData()
-        }
+    func registerSpotlightsCells() {
+        self.spotlightsCollectionView.register(SpotlightCollectionViewCell.register(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         viewModel.numberOfSections()
     }
     
-    func registerSpotlightsCells() {
-        self.spotlightsCollectionView.register(SpotlightCollectionViewCell.register(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier)
+    func reloadSpotlightsCollectionView() {
+        DispatchQueue.main.async {
+            self.spotlightsCollectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,6 +41,13 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         cell.setupSpotlightCell(viewModel: spotlightsDataSource[indexPath.row])
+        cell.layer.cornerRadius = 8.0
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 0.6
+        cell.layer.masksToBounds = false
         
         return cell
     }
