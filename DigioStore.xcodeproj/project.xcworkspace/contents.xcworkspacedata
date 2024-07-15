@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mateustaufer/development/projects/personal/DIgioStore/DigioStore.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
