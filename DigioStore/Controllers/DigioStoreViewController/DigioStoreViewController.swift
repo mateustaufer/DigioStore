@@ -116,4 +116,16 @@ class DigioStoreViewController: UIViewController {
         }
     }
     
+    func openProductDetail(productName: String) {
+        guard let product = viewModel.retrieveProduct(withId: productName) else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            let detailViewModel = ProductViewModel(product: product)
+            let detailViewController = ProductDetailViewController(viewModel: detailViewModel)
+            self.navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
 }

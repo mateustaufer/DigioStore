@@ -69,7 +69,7 @@ class DigioStoreViewModel {
         products.value = self.digioStoreData?.products.compactMap({ProductViewModel(product: $0)})
     }
     
-    func retriveProduct(withId name: String) -> Product? {
+    func retrieveProduct(withId name: String) -> Product? {
         guard let product = digioStoreData?.products.first(where: {$0.name == name}) else {
             return nil
         }

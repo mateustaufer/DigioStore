@@ -8,11 +8,13 @@
 import Foundation
 
 class ProductViewModel {
+    var product: Product
     var name: String
     var imageURL: URL?
     var description: String
     
     init(product: Product) {
+        self.product = product
         self.name = product.name
         self.imageURL = URL(string: product.imageURL)
         self.description = product.description
