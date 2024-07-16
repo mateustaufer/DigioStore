@@ -36,8 +36,6 @@ class DigioStoreViewController: UIViewController {
     }
     
     func configView() {
-        self.view.backgroundColor = UIColor.lightGray
-        
         self.userImageView.layer.borderWidth = 1.0
         self.userImageView.layer.masksToBounds = false
         self.userImageView.layer.borderColor = UIColor.white.cgColor
