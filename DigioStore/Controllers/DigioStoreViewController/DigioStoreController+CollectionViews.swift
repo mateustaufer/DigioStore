@@ -116,4 +116,11 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (collectionView == self.productsCollectionView) {
+            let productName = productsDataSource[indexPath.row].name
+            self.openProductDetail(productName: productName)
+        }
+    }
+    
 }
