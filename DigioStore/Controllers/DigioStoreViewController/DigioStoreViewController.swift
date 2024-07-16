@@ -17,6 +17,8 @@ class DigioStoreViewController: UIViewController {
     @IBOutlet weak var digioLabel: UILabel!
     @IBOutlet weak var cashLabel: UILabel!
     @IBOutlet weak var cashCollectionView: UICollectionView!
+    @IBOutlet weak var productsLabel: UILabel!
+    @IBOutlet weak var productsCollectionView: UICollectionView!
     
     //ViewModels
     var viewModel: DigioStoreViewModel = DigioStoreViewModel()
@@ -34,8 +36,6 @@ class DigioStoreViewController: UIViewController {
     }
     
     func configView() {
-//        self.view.backgroundColor = UIColor.lightGray
-        
         self.userImageView.layer.borderWidth = 1.0
         self.userImageView.layer.masksToBounds = false
         self.userImageView.layer.borderColor = UIColor.white.cgColor
@@ -50,6 +50,9 @@ class DigioStoreViewController: UIViewController {
         self.digioLabel.isHidden = true
         self.cashLabel.isHidden = true
         self.cashCollectionView.isHidden = true
+        
+        self.productsLabel.isHidden = true
+        self.productsCollectionView.isHidden = true
         
         self.setupCollectionView()
     }
@@ -75,6 +78,8 @@ class DigioStoreViewController: UIViewController {
                     self?.digioLabel.isHidden = false
                     self?.cashLabel.isHidden = false
                     self?.cashCollectionView.isHidden = false
+                    self?.productsLabel.isHidden = false
+                    self?.productsCollectionView.isHidden = false
                     self?.activityIndicator.stopAnimating()
                 }
             }
@@ -107,7 +112,7 @@ class DigioStoreViewController: UIViewController {
             }
             
             self.productsDataSource = products
-            //            self.reloadProductsCollectionView()
+            self.reloadProductsCollectionView()
         }
     }
     

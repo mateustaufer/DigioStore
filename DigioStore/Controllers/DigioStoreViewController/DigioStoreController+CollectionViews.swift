@@ -17,6 +17,9 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         self.cashCollectionView.delegate = self
         self.cashCollectionView.dataSource = self
         
+        self.productsCollectionView.delegate = self
+        self.productsCollectionView.dataSource = self
+        
         self.registerCells()
     }
     
@@ -24,6 +27,8 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         self.spotlightsCollectionView.register(SpotlightCollectionViewCell.register(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier)
         
         self.cashCollectionView.register(CashCollectionViewCell.register(), forCellWithReuseIdentifier: CashCollectionViewCell.identifier)
+        
+        self.productsCollectionView.register(ProductsCollectionViewCell.register(), forCellWithReuseIdentifier: ProductsCollectionViewCell.identifier)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -42,15 +47,42 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+    func reloadProductsCollectionView() {
+        DispatchQueue.main.async {
+            self.productsCollectionView.reloadData()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == self.spotlightsCollectionView) {
+            return self.viewModel.numberOfSpotlights(in: section)
+        }
+        
         if (collectionView == self.cashCollectionView) {
             return 1
         }
         
-        return self.viewModel.numberOfSpotlights(in: section)
+        return self.viewModel.numberOfProducts(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (collectionView == self.spotlightsCollectionView) {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCollectionViewCell.identifier, for: indexPath) as? SpotlightCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            cell.setupSpotlightCell(viewModel: spotlightsDataSource[indexPath.row])
+            cell.layer.cornerRadius = 8.0
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.lightGray.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+            cell.layer.shadowRadius = 2.0
+            cell.layer.shadowOpacity = 0.6
+            cell.layer.masksToBounds = false
+            
+            return cell
+        }
+        
         if (collectionView == self.cashCollectionView) {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CashCollectionViewCell.identifier, for: indexPath) as? CashCollectionViewCell else {
                 return UICollectionViewCell()
@@ -68,16 +100,16 @@ extension DigioStoreViewController: UICollectionViewDelegate, UICollectionViewDa
             return cell
         }
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCollectionViewCell.identifier, for: indexPath) as? SpotlightCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductsCollectionViewCell.identifier, for: indexPath) as? ProductsCollectionViewCell else {
             return UICollectionViewCell()
         }
         
-        cell.setupSpotlightCell(viewModel: spotlightsDataSource[indexPath.row])
-        cell.layer.cornerRadius = 8.0
+        cell.setupProductCell(viewModel: productsDataSource[indexPath.row])
+        cell.layer.cornerRadius = 16.0
         cell.layer.borderWidth = 0.0
         cell.layer.shadowColor = UIColor.lightGray.cgColor
         cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowRadius = 3.0
         cell.layer.shadowOpacity = 0.6
         cell.layer.masksToBounds = false
         

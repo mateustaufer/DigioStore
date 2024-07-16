@@ -23,12 +23,14 @@
 		CF23B72B2C4348AB0018990A /* DigioStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */; };
 		CF58E3842C45C1E500CC238D /* CashCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF58E3832C45C1E500CC238D /* CashCollectionViewCell.xib */; };
 		CF58E3852C45C1E500CC238D /* CashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E3822C45C1E500CC238D /* CashCollectionViewCell.swift */; };
+		CF58E3892C45D12700CC238D /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58E3872C45D12700CC238D /* ProductsCollectionViewCell.swift */; };
+		CF58E38A2C45D12700CC238D /* ProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF58E3882C45D12700CC238D /* ProductsCollectionViewCell.xib */; };
 		CF7C9C952C44719D0070A49D /* SpotlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C942C44719D0070A49D /* SpotlightViewModel.swift */; };
 		CF7C9C972C4472CA0070A49D /* CashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C962C4472CA0070A49D /* CashViewModel.swift */; };
 		CF7C9C992C44731A0070A49D /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C9C982C44731A0070A49D /* ProductViewModel.swift */; };
 		CF838F072C449ED5003A1B2C /* SpotlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF838F062C449ED5003A1B2C /* SpotlightCollectionViewCell.xib */; };
 		CF838F082C449ED5003A1B2C /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F052C449ED5003A1B2C /* SpotlightCollectionViewCell.swift */; };
-		CF838F0D2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F0C2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift */; };
+		CF838F0D2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F0C2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift */; };
 		CF9697BD2C44DE3B00DACCA3 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,12 +72,14 @@
 		CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreViewModel.swift; sourceTree = "<group>"; };
 		CF58E3822C45C1E500CC238D /* CashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF58E3832C45C1E500CC238D /* CashCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CashCollectionViewCell.xib; sourceTree = "<group>"; };
+		CF58E3872C45D12700CC238D /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CF58E3882C45D12700CC238D /* ProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF7C9C942C44719D0070A49D /* SpotlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightViewModel.swift; sourceTree = "<group>"; };
 		CF7C9C962C4472CA0070A49D /* CashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashViewModel.swift; sourceTree = "<group>"; };
 		CF7C9C982C44731A0070A49D /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		CF838F052C449ED5003A1B2C /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF838F062C449ED5003A1B2C /* SpotlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotlightCollectionViewCell.xib; sourceTree = "<group>"; };
-		CF838F0C2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DigioStoreController+SpotlightsCollectionView.swift"; sourceTree = "<group>"; };
+		CF838F0C2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DigioStoreController+CollectionViews.swift"; sourceTree = "<group>"; };
 		CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +167,7 @@
 			children = (
 				CF23B7142C43322D0018990A /* DigioStoreViewController.swift */,
 				CF23B7152C43322D0018990A /* DigioStoreViewController.xib */,
-				CF838F0C2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift */,
+				CF838F0C2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift */,
 			);
 			path = DigioStoreViewController;
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 		CF23B7282C4347F20018990A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF58E3862C45D10A00CC238D /* ProductsCollectionViewCell */,
 				CF58E3812C45C1CA00CC238D /* CashCollectionViewCell */,
 				CF838F092C449EFB003A1B2C /* SpotlightCollectionViewCell */,
 				CF23B6EE2C4330D80018990A /* LaunchScreen.storyboard */,
@@ -246,6 +251,15 @@
 				CF58E3832C45C1E500CC238D /* CashCollectionViewCell.xib */,
 			);
 			path = CashCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CF58E3862C45D10A00CC238D /* ProductsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF58E3872C45D12700CC238D /* ProductsCollectionViewCell.swift */,
+				CF58E3882C45D12700CC238D /* ProductsCollectionViewCell.xib */,
+			);
+			path = ProductsCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		CF838F092C449EFB003A1B2C /* SpotlightCollectionViewCell */ = {
@@ -363,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF58E38A2C45D12700CC238D /* ProductsCollectionViewCell.xib in Resources */,
 				CF23B6ED2C4330D80018990A /* Assets.xcassets in Resources */,
 				CF838F072C449ED5003A1B2C /* SpotlightCollectionViewCell.xib in Resources */,
 				CF58E3842C45C1E500CC238D /* CashCollectionViewCell.xib in Resources */,
@@ -403,7 +418,8 @@
 				CF7C9C992C44731A0070A49D /* ProductViewModel.swift in Sources */,
 				CF7C9C952C44719D0070A49D /* SpotlightViewModel.swift in Sources */,
 				CF23B71E2C4345A30018990A /* UIViewExtensions.swift in Sources */,
-				CF838F0D2C44C9E4003A1B2C /* DigioStoreController+SpotlightsCollectionView.swift in Sources */,
+				CF838F0D2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift in Sources */,
+				CF58E3892C45D12700CC238D /* ProductsCollectionViewCell.swift in Sources */,
 				CF58E3852C45C1E500CC238D /* CashCollectionViewCell.swift in Sources */,
 				CF23B72B2C4348AB0018990A /* DigioStoreViewModel.swift in Sources */,
 				CF7C9C972C4472CA0070A49D /* CashViewModel.swift in Sources */,
