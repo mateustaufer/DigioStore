@@ -1,0 +1,164 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+# https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+# https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+xcodeproj = "DigioStore.xcodeproj"
+workspace = "project.xcworkspace"
+plist_path = "DigioStore/Info.plist"
+appName = "DigioStore"
+app_identifier = "br.com.mateustaufer.DigioStore"
+scheme = "DigioStore"
+teamid = "96PP003WJT"
+groupsAppleStore = "TestGroup"
+key_id_prod = "6L69C04JGS"
+issuer_id_prod = "54be5661-4715-4a2c-8bd9-ce30f0e5a999"
+prod_api_key_path = "./AuthKey_6L69C04JGS.p8"
+git_basic_authorization = "bWF0ZXVzdGF1ZmVyOmdocF9HNlllMlNDVjlkTk5XbndrZE9PTE5ZSm5zdWFYc0syZHRZbkQ="
+match_pass = "neoc21m12tr"
+
+platform :ios do
+  desc "Increment Build Number"
+  lane :_increment_build do
+    api_key = app_store_connect_api_key(
+      key_id: key_id_prod,
+      issuer_id: issuer_id_prod,
+      key_filepath: prod_api_key_path,
+      in_house: false # optional but may be required if using match/sigh
+    )
+    increment_build_number(build_number: latest_testflight_build_number + 1)
+  end
+end
+
+platform :ios do
+  desc "Login Apple Connect"
+  lane :_connect_appstore do
+    setup_ci if ENV['CI']
+    ENV['MATCH_PASSWORD'] = match_pass
+
+    api_key = app_store_connect_api_key(
+      key_id: key_id_prod,
+      issuer_id: issuer_id_prod,
+      key_filepath: prod_api_key_path,
+      in_house: false
+    )
+
+    match(
+      type: "appstore",
+      app_identifier: app_identifier,
+      git_basic_authorization: git_basic_authorization,
+      team_id: teamid,
+      readonly: true
+    )
+  end
+end
+
+platform :ios do
+  desc "Build&Distribute App for AppStore"
+  lane :_production do
+    setup_ci if ENV['CI']
+    ENV['MATCH_PASSWORD'] = match_pass
+
+    api_key = app_store_connect_api_key(
+      key_id: key_id_prod,
+      issuer_id: issuer_id_prod,
+      key_filepath: prod_api_key_path,
+      in_house: false
+    )
+
+    match(
+      type: "appstore",
+      app_identifier: app_identifier,
+      git_basic_authorization: git_basic_authorization,
+      team_id: teamid,
+      readonly: true
+    )
+
+    increment_build_number(build_number: latest_testflight_build_number + 1)
+   
+    gym(
+      scheme: scheme,
+      workspace: workspace,
+      export_method: "app-store",
+      configuration: "Release",
+      include_bitcode: false,
+      export_options: {
+        uploadBitcode: false,
+        uploadSymbols: true,
+        compileBitcode: false,
+        provisioningProfiles: {
+          app_identifier => "match AppStore " + app_identifier
+        }
+      }
+    )
+
+    pilot(
+      changelog:"Newer version of IOs APP",
+      skip_waiting_for_build_processing: true,
+      api_key: api_key, 
+      ipa: "Digio.ipa",
+      distribute_external: true,
+      app_identifier: app_identifier
+    )
+  end
+end
+
+platform :ios do
+  desc "Build&Distribute App for Testflight"
+  lane :_staging do
+    setup_ci if ENV['CI']
+    ENV['MATCH_PASSWORD'] = match_pass
+
+    api_key = app_store_connect_api_key(
+      key_id: key_id_prod,
+      issuer_id: issuer_id_prod,
+      key_filepath: prod_api_key_path,
+      in_house: false
+    )
+    
+    match(
+      type: "appstore",
+      app_identifier: app_identifier,
+      git_basic_authorization: git_basic_authorization,
+      team_id: teamid,
+      readonly: true
+    )
+
+    increment_build_number(build_number: latest_testflight_build_number + 1)
+   
+    gym(
+      scheme: scheme,
+      workspace: workspace,
+      export_method: "app-store",
+      configuration: "Release",
+      include_bitcode: false,
+      export_options: {
+        uploadBitcode: false,
+        uploadSymbols: true,
+        compileBitcode: false,
+        provisioningProfiles: {
+          app_identifier => "match AppStore " + app_identifier
+        }
+      }
+    )
+    
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+      distribute_external: false,
+      groups: ['TestGroup']
+    )
+  end
+end
