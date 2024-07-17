@@ -9,17 +9,18 @@ import Foundation
 import UIKit
 
 enum NetworkError: Error {
-    case urlError
-    case canNotParseData
+    case invalidURL
+    case invalidResponse
 }
 
-public class APICaller {
+public class NetworkManager {
+    static let shared = NetworkManager()
     
-    static func getDigioStore(completionHandler: @escaping (_ result: Result<DigioStoreModel, NetworkError>) -> Void) {
+    func getDigioStore(completionHandler: @escaping (_ result: Result<DigioStoreModel, NetworkError>) -> Void) {
         let urlString = NetworkConstants.shared.serverAddress + "products"
         
         guard let url = URL(string: urlString) else {
-            completionHandler(Result.failure(.urlError))
+            completionHandler(Result.failure(.invalidURL))
             return
         }
         
@@ -30,7 +31,7 @@ public class APICaller {
                 completionHandler(.success(resultData))
             } else {
                 print(err.debugDescription)
-                completionHandler(.failure(.canNotParseData))
+                completionHandler(.failure(.invalidResponse))
             }
         }.resume()
     }

@@ -11,14 +11,12 @@
 		CF23B6ED2C4330D80018990A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF23B6EC2C4330D80018990A /* Assets.xcassets */; };
 		CF23B6F02C4330D80018990A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CF23B6EF2C4330D80018990A /* Base */; };
 		CF23B6FB2C4330D80018990A /* DigioStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */; };
-		CF23B7052C4330D80018990A /* DigioStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7042C4330D80018990A /* DigioStoreUITests.swift */; };
-		CF23B7072C4330D80018990A /* DigioStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */; };
 		CF23B7162C43322D0018990A /* DigioStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7142C43322D0018990A /* DigioStoreViewController.swift */; };
 		CF23B7172C43322D0018990A /* DigioStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF23B7152C43322D0018990A /* DigioStoreViewController.xib */; };
 		CF23B71A2C4345340018990A /* Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7192C4345340018990A /* Observables.swift */; };
 		CF23B71E2C4345A30018990A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B71D2C4345A30018990A /* UIViewExtensions.swift */; };
 		CF23B7212C4345E30018990A /* DigioStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7202C4345E30018990A /* DigioStoreModel.swift */; };
-		CF23B7242C4346600018990A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7232C4346600018990A /* APICaller.swift */; };
+		CF23B7242C4346600018990A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7232C4346600018990A /* NetworkManager.swift */; };
 		CF23B7262C4346B70018990A /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B7252C4346B70018990A /* NetworkConstants.swift */; };
 		CF23B72B2C4348AB0018990A /* DigioStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */; };
 		CF3F29E52C45F85E001E6A29 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3F29E42C45F85E001E6A29 /* ProductDetailViewController.xib */; };
@@ -34,17 +32,12 @@
 		CF838F082C449ED5003A1B2C /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F052C449ED5003A1B2C /* SpotlightCollectionViewCell.swift */; };
 		CF838F0D2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF838F0C2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift */; };
 		CF9697BD2C44DE3B00DACCA3 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */; };
+		CFC787AB2C486DD500FF88E3 /* DigioStoreTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC787AA2C486DD500FF88E3 /* DigioStoreTestViewModel.swift */; };
+		CFC787AE2C486E2C00FF88E3 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC787AD2C486E2C00FF88E3 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CF23B6F72C4330D80018990A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF23B6D82C4330D70018990A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF23B6DF2C4330D70018990A;
-			remoteInfo = DIgioStore;
-		};
-		CF23B7012C4330D80018990A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CF23B6D82C4330D70018990A /* Project object */;
 			proxyType = 1;
@@ -61,15 +54,12 @@
 		CF23B6F12C4330D80018990A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreTests.swift; sourceTree = "<group>"; };
-		CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF23B7042C4330D80018990A /* DigioStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreUITests.swift; sourceTree = "<group>"; };
-		CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CF23B7142C43322D0018990A /* DigioStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreViewController.swift; sourceTree = "<group>"; };
 		CF23B7152C43322D0018990A /* DigioStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigioStoreViewController.xib; sourceTree = "<group>"; };
 		CF23B7192C4345340018990A /* Observables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observables.swift; sourceTree = "<group>"; };
 		CF23B71D2C4345A30018990A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		CF23B7202C4345E30018990A /* DigioStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreModel.swift; sourceTree = "<group>"; };
-		CF23B7232C4346600018990A /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		CF23B7232C4346600018990A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CF23B7252C4346B70018990A /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		CF23B72A2C4348AB0018990A /* DigioStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreViewModel.swift; sourceTree = "<group>"; };
 		CF3F29E32C45F85E001E6A29 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +75,8 @@
 		CF838F062C449ED5003A1B2C /* SpotlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotlightCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF838F0C2C44C9E4003A1B2C /* DigioStoreController+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DigioStoreController+CollectionViews.swift"; sourceTree = "<group>"; };
 		CF9697BC2C44DE3B00DACCA3 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		CFC787AA2C486DD500FF88E3 /* DigioStoreTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioStoreTestViewModel.swift; sourceTree = "<group>"; };
+		CFC787AD2C486E2C00FF88E3 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +94,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF23B6FD2C4330D80018990A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,7 +102,6 @@
 			children = (
 				CF23B6E22C4330D70018990A /* DigioStore */,
 				CF23B6F92C4330D80018990A /* DigioStoreTests */,
-				CF23B7032C4330D80018990A /* DigioStoreUITests */,
 				CF23B6E12C4330D70018990A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,7 +111,6 @@
 			children = (
 				CF23B6E02C4330D70018990A /* DigioStore.app */,
 				CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */,
-				CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,18 +135,11 @@
 		CF23B6F92C4330D80018990A /* DigioStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				CFC787AC2C486E0D00FF88E3 /* Networking */,
+				CFC787A92C486DB100FF88E3 /* ViewModels */,
 				CF23B6FA2C4330D80018990A /* DigioStoreTests.swift */,
 			);
 			path = DigioStoreTests;
-			sourceTree = "<group>";
-		};
-		CF23B7032C4330D80018990A /* DigioStoreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CF23B7042C4330D80018990A /* DigioStoreUITests.swift */,
-				CF23B7062C4330D80018990A /* DigioStoreUITestsLaunchTests.swift */,
-			);
-			path = DigioStoreUITests;
 			sourceTree = "<group>";
 		};
 		CF23B7132C4332050018990A /* DigioStoreViewController */ = {
@@ -213,7 +189,7 @@
 		CF23B7222C4346470018990A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CF23B7232C4346600018990A /* APICaller.swift */,
+				CF23B7232C4346600018990A /* NetworkManager.swift */,
 				CF23B7252C4346B70018990A /* NetworkConstants.swift */,
 			);
 			path = Networking;
@@ -285,6 +261,22 @@
 			path = SpotlightCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		CFC787A92C486DB100FF88E3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CFC787AA2C486DD500FF88E3 /* DigioStoreTestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CFC787AC2C486E0D00FF88E3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CFC787AD2C486E2C00FF88E3 /* MockNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,24 +315,6 @@
 			productReference = CF23B6F62C4330D80018990A /* DigioStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CF23B6FF2C4330D80018990A /* DigioStoreUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF23B7102C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreUITests" */;
-			buildPhases = (
-				CF23B6FC2C4330D80018990A /* Sources */,
-				CF23B6FD2C4330D80018990A /* Frameworks */,
-				CF23B6FE2C4330D80018990A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CF23B7022C4330D80018990A /* PBXTargetDependency */,
-			);
-			name = DigioStoreUITests;
-			productName = DIgioStoreUITests;
-			productReference = CF23B7002C4330D80018990A /* DigioStoreUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -355,10 +329,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					CF23B6F52C4330D80018990A = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = CF23B6DF2C4330D70018990A;
-					};
-					CF23B6FF2C4330D80018990A = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = CF23B6DF2C4330D70018990A;
 					};
@@ -381,7 +351,6 @@
 			targets = (
 				CF23B6DF2C4330D70018990A /* DigioStore */,
 				CF23B6F52C4330D80018990A /* DigioStoreTests */,
-				CF23B6FF2C4330D80018990A /* DigioStoreUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,13 +377,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF23B6FE2C4330D80018990A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -425,7 +387,7 @@
 				CF9697BD2C44DE3B00DACCA3 /* UIImageViewExtensions.swift in Sources */,
 				CF23B7262C4346B70018990A /* NetworkConstants.swift in Sources */,
 				CF23B6E42C4330D70018990A /* AppDelegate.swift in Sources */,
-				CF23B7242C4346600018990A /* APICaller.swift in Sources */,
+				CF23B7242C4346600018990A /* NetworkManager.swift in Sources */,
 				CF838F082C449ED5003A1B2C /* SpotlightCollectionViewCell.swift in Sources */,
 				CF23B7162C43322D0018990A /* DigioStoreViewController.swift in Sources */,
 				CF23B71A2C4345340018990A /* Observables.swift in Sources */,
@@ -446,16 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC787AE2C486E2C00FF88E3 /* MockNetworkManager.swift in Sources */,
 				CF23B6FB2C4330D80018990A /* DigioStoreTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF23B6FC2C4330D80018990A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF23B7052C4330D80018990A /* DigioStoreUITests.swift in Sources */,
-				CF23B7072C4330D80018990A /* DigioStoreUITestsLaunchTests.swift in Sources */,
+				CFC787AB2C486DD500FF88E3 /* DigioStoreTestViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,11 +421,6 @@
 			isa = PBXTargetDependency;
 			target = CF23B6DF2C4330D70018990A /* DigioStore */;
 			targetProxy = CF23B6F72C4330D80018990A /* PBXContainerItemProxy */;
-		};
-		CF23B7022C4330D80018990A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CF23B6DF2C4330D70018990A /* DigioStore */;
-			targetProxy = CF23B7012C4330D80018990A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -693,7 +643,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigioStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigioStore";
 			};
@@ -717,53 +667,9 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigioStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DigioStore";
-			};
-			name = Release;
-		};
-		CF23B7112C4330D80018990A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PGP8AR9DZG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DIgioStore;
-			};
-			name = Debug;
-		};
-		CF23B7122C4330D80018990A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PGP8AR9DZG;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.mateustaufer.DIgioStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = DIgioStore;
 			};
 			name = Release;
 		};
@@ -793,15 +699,6 @@
 			buildConfigurations = (
 				CF23B70E2C4330D80018990A /* Debug */,
 				CF23B70F2C4330D80018990A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF23B7102C4330D80018990A /* Build configuration list for PBXNativeTarget "DigioStoreUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF23B7112C4330D80018990A /* Debug */,
-				CF23B7122C4330D80018990A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
