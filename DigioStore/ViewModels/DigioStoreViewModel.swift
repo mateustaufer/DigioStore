@@ -8,6 +8,11 @@
 import Foundation
 
 class DigioStoreViewModel {
+    private let networkManager: NetworkManager
+    
+    init(networkManager: NetworkManager = .shared) {
+        self.networkManager = networkManager
+    }
     
     var isLoadingData: Observable<Bool> = Observable(false)
     var digioStoreData: DigioStoreModel?
@@ -34,7 +39,7 @@ class DigioStoreViewModel {
         
         isLoadingData.value = true
         
-        APICaller.getDigioStore{[weak self] result in
+        networkManager.getDigioStore{[weak self] result in
             self?.isLoadingData.value = false
             
             switch result {
